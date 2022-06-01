@@ -1,12 +1,12 @@
 const { argv } = require("process");
-const { relayer } = require("../config");
+const { relayer } = require("../../config");
 
 const sleep = async (ms) =>
   new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
 
-const sendMany = async (n, intervalMs) => {
+const sendManyTxs = async (n, intervalMs) => {
   try {
     const txParams = (value) => ({
       to: "0xE3D450F1C50757fFB2b5ddE03A1A0d7Bc32F0153",
@@ -43,4 +43,4 @@ const sendMany = async (n, intervalMs) => {
   }
 };
 
-sendMany(argv[2 ?? 1], 100);
+sendManyTxs(argv[2 ?? 1], 100);

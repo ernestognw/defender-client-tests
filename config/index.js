@@ -1,5 +1,6 @@
 const { Relayer } = require("defender-relay-client");
 const { SentinelClient } = require("defender-sentinel-client");
+const { AutotaskClient } = require("defender-autotask-client");
 const { relayerKeys, apiKeys } = require("./environment");
 
 const relayer = new Relayer({
@@ -12,4 +13,9 @@ const sentinel = new SentinelClient({
   apiSecret: apiKeys.secretKey,
 });
 
-module.exports = { relayer, sentinel };
+const autotask = new AutotaskClient({
+  apiKey: apiKeys.apiKey,
+  apiSecret: apiKeys.secretKey,
+});
+
+module.exports = { relayer, sentinel, autotask };

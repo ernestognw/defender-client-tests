@@ -4,10 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "sendMany": "node scripts/send-many-txs.js",
-    "updateSentinelNotificationBody": "node scripts/update-sentinel-notification-body.js"
+    "relayer:sendManyTxs": "node scripts/relayer/send-many-txs.js",
+    "sentinel:updateNotificationBody": "node scripts/sentinel/update-notification-body.js",
+    "autotask:updateCode": "node scripts/autotask/update-code"
   },
   "dependencies": {
+    "defender-autotask-client": "^1.22.0",
     "defender-relay-client": "^1.21.3",
     "defender-sentinel-client": "^1.21.3",
     "dotenv": "^11.0.0"
