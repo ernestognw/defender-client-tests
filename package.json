@@ -1,0 +1,15 @@
+{
+  "name": "client-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "sendMany": "node scripts/send-many-txs.js",
+    "updateSentinelNotificationBody": "node scripts/update-sentinel-notification-body.js"
+  },
+  "dependencies": {
+    "defender-relay-client": "^1.21.3",
+    "defender-sentinel-client": "^1.21.3",
+    "dotenv": "^11.0.0"
+  }
+}
