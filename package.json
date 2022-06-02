@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "relayer:list": "node scripts/relayer/list.js",
     "relayer:sendManyTxs": "node scripts/relayer/send-many-txs.js",
     "sentinel:updateNotificationBody": "node scripts/sentinel/update-notification-body.js",
     "autotask:updateCode": "node scripts/autotask/update-code"
