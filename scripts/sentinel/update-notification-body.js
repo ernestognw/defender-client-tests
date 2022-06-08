@@ -1,13 +1,15 @@
 const { argv } = require("process");
-const { sentinel } = require("../../config");
+const { sentinelClient } = require("../../config");
 
 const updateNotificationBody = async () => {
   const autotaskId = argv[2];
-  const updated = await sentinel.update(autotaskId, {
+  const updated = await sentinelClient.update(autotaskId, {
     alertMessageBody: "updateNotificationBody",
   });
 
   console.log(updated.notifyConfig);
 };
 
-updateNotificationBody().then(() => console.log("success"));
+updateNotificationBody()
+  .then(() => console.log("success"))
+  .catch(console.error);
