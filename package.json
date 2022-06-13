@@ -6,8 +6,8 @@
   "scripts": {
     "relayer:create": "node scripts/relayer/create.js",
     "relayer:update": "node scripts/relayer/update.js",
-    "relayer:tx:list": "node scripts/relayer/tx/list.js",
-    "relayer:tx:send": "node scripts/relayer/tx/send.js",
+    "relayer:tx:list": "node scripts/relayer/txs/list.js",
+    "relayer:tx:send": "node scripts/relayer/txs/send.js",
     "sentinel:updateNotificationBody": "node scripts/sentinel/update-notification-body.js",
     "autotask:updateCode": "node scripts/autotask/update-code"
   },
