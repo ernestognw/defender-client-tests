@@ -6,6 +6,7 @@
   "scripts": {
     "relayer:create": "node scripts/relayer/create.js",
     "relayer:update": "node scripts/relayer/update.js",
+    "relayer:ethers:send": "node scripts/relayer/ethers/send.js",
     "relayer:tx:list": "node scripts/relayer/txs/list.js",
     "relayer:tx:send": "node scripts/relayer/txs/send.js",
     "sentinel:updateNotificationBody": "node scripts/sentinel/update-notification-body.js",
@@ -13,8 +14,9 @@
   },
   "dependencies": {
     "defender-autotask-client": "^1.22.0",
-    "defender-relay-client": "^1.21.3",
+    "defender-relay-client": "1.24.0",
     "defender-sentinel-client": "^1.21.3",
-    "dotenv": "^11.0.0"
+    "dotenv": "^11.0.0",
+    "ethers": "^5.6.9"
   }
 }
