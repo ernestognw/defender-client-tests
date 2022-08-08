@@ -450,13 +450,13 @@ crypto-js@^4.0.0:
   resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.1.1.tgz#9e485bcf03521041bd85844786b83fb7619736cf"
   integrity sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==
 
-defender-autotask-client@^1.22.0:
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/defender-autotask-client/-/defender-autotask-client-1.22.0.tgz#a45990efb73ea665f15b624be934426af976a9b5"
-  integrity sha512-P8lOdn5aJAy26FDBZo5ejV1ugZ85eudCcUdwdyXHqaPpO4nifpbrjB+LTFIlUS11g9fhFRzzrMfiSJyqdvpv8w==
+defender-autotask-client@1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/defender-autotask-client/-/defender-autotask-client-1.27.0.tgz#29c0e9fca1d0a137070d14aba0589134df12bbe7"
+  integrity sha512-5JCGj7LkWysuvykSYFQ21GgDlSn6JBD6pyKAJcPy0mjh9ASikIDBVhKTrVtaY09SurKEU7T5ydJt3plraL0JFA==
   dependencies:
     axios "^0.21.2"
-    defender-base-client "1.21.3"
+    defender-base-client "^1.27.0"
     dotenv "^10.0.0"
     glob "^7.1.6"
     jszip "^3.5.0"
@@ -473,24 +473,34 @@ defender-base-client@1.21.3:
     lodash "^4.17.19"
     node-fetch "^2.6.0"
 
-defender-base-client@1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/defender-base-client/-/defender-base-client-1.24.0.tgz#7696e43c9f29be0446b4a33129e0db692d75c916"
-  integrity sha512-5z1pbJLSiDxPik/LcbaYtKvea9c/u0wfzxWKIj/SkfqiY8PumeRvju9yHEvkuksVWUmAIBg0JoJTtn6haUjkMA==
+defender-base-client@1.27.1:
+  version "1.27.1"
+  resolved "https://registry.yarnpkg.com/defender-base-client/-/defender-base-client-1.27.1.tgz#4376a5046a0546d58c2b8f3c661e2dec1fdfa87c"
+  integrity sha512-/EyzoNyEGXeD1yeudxfSTQvdM2JiFguS8COWkNDYAsIbrvRd+J8JWwkjAd2/dckrWohK3ycvay1fvWeQj0Dmhw==
   dependencies:
     amazon-cognito-identity-js "^4.3.3"
     axios "^0.21.2"
     lodash "^4.17.19"
     node-fetch "^2.6.0"
 
-defender-relay-client@1.24.0:
-  version "1.24.0"
-  resolved "https://registry.yarnpkg.com/defender-relay-client/-/defender-relay-client-1.24.0.tgz#808c73fb2229783f045b005b7c919868a822fe9f"
-  integrity sha512-41+HHtJl5vu68mAn1iLPTYsvfl+S4VQuUsQ8HxdglpT6cRLQjcnJ5bxl11ZUVIiz7BztpbWAMBuUg3sS7r17SA==
+defender-base-client@^1.27.0:
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/defender-base-client/-/defender-base-client-1.27.0.tgz#aa8d4488bc08233dfeae144815ed2b87cf3d9c71"
+  integrity sha512-Iq0KEwXK/dSKZ0pDvvxsZ0BKjw5kLoV1fRimBOngcd9E4AJjrwihljPxZbgb1uxcQ3BT4vzfklQnplTW1t9FIw==
   dependencies:
     amazon-cognito-identity-js "^4.3.3"
     axios "^0.21.2"
-    defender-base-client "1.24.0"
+    lodash "^4.17.19"
+    node-fetch "^2.6.0"
+
+defender-relay-client@1.27.1:
+  version "1.27.1"
+  resolved "https://registry.yarnpkg.com/defender-relay-client/-/defender-relay-client-1.27.1.tgz#89fa5fd4ca596f20cab0d4cae03db763a410aeb6"
+  integrity sha512-veTb5Ra88VOgsXho+90wULLHcqJggI1BB0K92oBiEFE0sPyAkFjSOUuqbypOwIxsNs0Iv9UxcY5LeJQAU6WbDg==
+  dependencies:
+    amazon-cognito-identity-js "^4.3.3"
+    axios "^0.21.2"
+    defender-base-client "1.27.1"
     lodash "^4.17.19"
     node-fetch "^2.6.0"
 
