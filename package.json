@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "admin:list": "node scripts/admin/list.js",
+    "admin:proposals:list": "node scripts/admin/proposals/list.js",
+    "admin:proposals:proposeRevokeRole": "node scripts/admin/proposals/proposeRevokeRole.js",
+    "admin:proposals:proposeGrantRole": "node scripts/admin/proposals/proposeGrantRole.js",
     "relayer:create": "node scripts/relayer/create.js",
     "relayer:update": "node scripts/relayer/update.js",
     "relayer:ethers:send": "node scripts/relayer/ethers/send.js",
@@ -14,6 +18,7 @@
     "autotask:list": "node scripts/autotask/list"
   },
   "dependencies": {
+    "defender-admin-client": "^1.27.1",
     "defender-autotask-client": "^1.27.0",
     "defender-relay-client": "^1.27.1",
     "defender-sentinel-client": "^1.21.3",
