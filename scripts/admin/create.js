@@ -4,52 +4,91 @@ const create = async () => {
   const proposal = {
     contract: [
       {
-        address: "0x21eB4eA20427F559A714E5ce246FC6Fe02994301",
+        address: "0x24B5C627cF54582F93eDbcF6186989227400Ac75",
+        name: "ERC20 Token",
         network: "goerli",
+        abi: JSON.stringify([
+          {
+            inputs: [
+              { internalType: "uint256", name: "_amount", type: "uint256" },
+            ],
+            name: "mint",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+          {
+            inputs: [
+              { internalType: "address", name: "to", type: "address" },
+              { internalType: "uint256", name: "amount", type: "uint256" },
+            ],
+            name: "transfer",
+            outputs: [{ internalType: "bool", name: "", type: "bool" }],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+        ]),
       },
       {
-        address: "0x4D6eD412bF71791909D469ef89A297FE2B4074e6",
+        address: "0xa50d145697530e8fef3F59a9643c6E9992d0f30D",
         network: "goerli",
-      },
-      {
-        address: "0xedF6C64445B2aD3242A4C3bD468Eda726971bd06",
-        network: "goerli",
+        name: "Roles Contract",
+        abi: JSON.stringify([
+          {
+            inputs: [
+              {
+                internalType: "bytes32",
+                name: "role",
+                type: "bytes32",
+              },
+              {
+                internalType: "address",
+                name: "account",
+                type: "address",
+              },
+            ],
+            name: "grantRole",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+        ]),
       },
     ],
-    title: "Batch transfer test",
-    description: "Batch transfer test",
+    title: "Batch test",
+    description: "Mint, transfer and modify access control",
     type: "batch",
     via: "0x604f140853Aba4c5073216f0418566DB4C82ffd9",
     viaType: "Gnosis Safe",
-    metadata: {},
+    metadata: {}, // Required field but empty
     steps: [
       {
-        contractId: "goerli-0x4D6eD412bF71791909D469ef89A297FE2B4074e6",
+        contractId: "goerli-0x24B5C627cF54582F93eDbcF6186989227400Ac75",
         targetFunction: {
-          name: "approve",
+          name: "mint",
+          inputs: [{ type: "uint256", name: "amount" }],
+        },
+        functionInputs: ["999"],
+        type: "custom",
+      },
+      {
+        contractId: "goerli-0x24B5C627cF54582F93eDbcF6186989227400Ac75",
+        targetFunction: {
+          name: "transfer",
           inputs: [
-            { type: "address", name: "spender" },
+            { type: "address", name: "to" },
             { type: "uint256", name: "amount" },
           ],
         },
-        functionInputs: ["0x21eB4eA20427F559A714E5ce246FC6Fe02994301", "100"],
+        functionInputs: ["0x604f140853Aba4c5073216f0418566DB4C82ffd9", "999"],
         type: "custom",
       },
       {
-        contractId: "goerli-0x21eB4eA20427F559A714E5ce246FC6Fe02994301",
-        targetFunction: {
-          name: "transferSelf",
-          inputs: [{ type: "uint256", name: "amount" }],
-        },
-        functionInputs: ["100"],
-        type: "custom",
-      },
-      {
-        contractId: "goerli-0xedF6C64445B2aD3242A4C3bD468Eda726971bd06",
+        contractId: "goerli-0xa50d145697530e8fef3F59a9643c6E9992d0f30D",
         metadata: {
-          action: "revokeRole",
-          role: "0x5f58e3a2316349923ce3780f8d587db2d72378aed66a8261c916544fa6846ca5",
-          account: "0xbEA76Df6AFccA5E729b839c0A258Df8f359ac64c",
+          action: "grantRole",
+          role: "0x0000000000000000000000000000000000000000000000000000000000000000",
+          account: "0x604f140853Aba4c5073216f0418566DB4C82ffd9",
         },
         type: "access-control",
       },
