@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "admin:create": "node scripts/admin/create.js",
     "admin:list": "node scripts/admin/list.js",
     "admin:proposals:list": "node scripts/admin/proposals/list.js",
     "admin:proposals:proposeRevokeRole": "node scripts/admin/proposals/proposeRevokeRole.js",
