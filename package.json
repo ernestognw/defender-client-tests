@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "admin:create": "node scripts/admin/create.js",
     "admin:list": "node scripts/admin/list.js",
     "admin:proposals:list": "node scripts/admin/proposals/list.js",
+    "admin:proposals:create": "node scripts/admin/proposals/create.js",
     "admin:proposals:proposeRevokeRole": "node scripts/admin/proposals/proposeRevokeRole.js",
     "admin:proposals:proposeGrantRole": "node scripts/admin/proposals/proposeGrantRole.js",
     "relayer:create": "node scripts/relayer/create.js",

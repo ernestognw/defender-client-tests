@@ -1,4 +1,4 @@
-const { adminClient } = require("../../config");
+const { adminClient } = require("../../../config");
 
 const create = async () => {
   const proposal = {
