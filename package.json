@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "admin:list": "node scripts/admin/list.js",
+    "admin:proposals:get": "node scripts/admin/proposals/get.js",
     "admin:proposals:list": "node scripts/admin/proposals/list.js",
     "admin:proposals:create": "node scripts/admin/proposals/create.js",
     "admin:proposals:proposeRevokeRole": "node scripts/admin/proposals/proposeRevokeRole.js",
