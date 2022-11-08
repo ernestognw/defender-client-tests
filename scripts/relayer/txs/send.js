@@ -22,6 +22,7 @@ const send = async (n, intervalMs) => {
     speed: "fast",
     // gasPrice: 1e5,
     validUntil: new Date(new Date().getTime() + 1000 * 60 * 5), // 10 minutes
+    // isPrivate: true,
   });
 
   const txsToSend = new Array(Number(n)).fill().map(async (_, i) => {

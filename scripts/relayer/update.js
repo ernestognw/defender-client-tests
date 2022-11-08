@@ -1,16 +1,17 @@
 const { argv } = require("process");
 const { relayClient } = require("../../config");
 
-const create = async () => {
+const update = async () => {
   const relayerId = argv[2];
   const result = await relayClient.update(relayerId, {
-    name: "Test 2",
-    paused: true,
+    policies: {
+      privateTransactions: false,
+    },
   });
 
   console.log(result);
 };
 
-create()
+update()
   .then(() => console.log("success"))
   .catch(console.error);
